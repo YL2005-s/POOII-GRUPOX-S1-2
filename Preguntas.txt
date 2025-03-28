@@ -1,1 +1,23 @@
+4.	Identificar las clases que heredan, ¿qué atributos y métodos heredan?
 
+La clase Triangulo hereda FiguraGeometrica, hereda el atributo nombre y los métodos getNombre(), setNombrecalcularAreaFigura() y esRegular() y debe implementar los métodos abstractos de FiguraGeometrica.
+
+5.	Identificar las clases que conforman una composición.
+
+La clase Triangulo contiene tres objetos de la clase Punto, lo que indica una relación de composición, también, SuperficiePlana tiene una lista de FiguraGeometrica, indicando otra composición.
+6.	¿Qué es una superclase y una subclase?
+
+Una superclase es la clase de la que otras heredan, como FiguraGeometrica. Una subclase es la que hereda de otra, como Triangulo, que extiende FiguraGeometrica.
+
+7.	¿Por qué usamos abstract? ¿Se puede dejar de heredar un método de una clase abstracta?
+abstract se usa para definir métodos que deben ser implementados por las subclases, una subclase concreta no puede ignorar estos métodos; debe implementarlos o declararse como abstracta.
+
+8.	¿Qué anotación utilizo para sobreescribir métodos?
+La anotación @Override se usa para indicar que un método sobrescribe uno de la superclase. Esto ayuda a evitar errores y mejora la legibilidad del código.
+
+9.	Los atributos de la clase Figura Geométrica conviértalas en protected. ¿En qué condición convierte a los atributos? ¿Es posible acceder a los atributos protegidos sin utilizar una invocación a super() o sin método get?
+Si nombre es protected, las subclases pueden acceder directamente sin super() o get(). Sin embargo, solo las clases del mismo paquete y las subclases podrán verlo.
+
+10.	 ¿Cómo aplicarías polimorfismo?
+
+El polimorfismo se aplica en este código mediante la superclase FiguraGeometrica y su método abstracto calcularAreaFigura(), las subclases como Triangulo implementan este método con su propia lógica, así mismo, en SuperficiePlana, la lista de FiguraGeometrica permite almacenar diferentes figuras geométricas y calcular sus áreas sin importar su tipo específic, demostrando el polimorfismo en tiempo de ejecución, donde se llama al método adecuado según la instancia concreta.
